@@ -1,0 +1,115 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+ * v2.0 | 20110126
+ * License: none (public domain) */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+  background: black;
+  text-align: center;
+  color:  white;
+  font-family: 'Avenir Next', 'Noto Sans', sans-serif;
+}
+.container{
+	width: 70%;
+	max-width: 1000px;
+	margin: 15% auto;
+	text-align: left;
+	position: relative;
+	padding: 0 0 0 40px;
+}
+.icon{
+	margin-left: -80px;
+	position: absolute;
+	z-index: -100;
+}
+.name{
+	display: inline-block;
+	margin: 80px 0 0;
+	font-size: 3em;
+	font-weight: 100;
+	text-transform: uppercase;
+	letter-spacing: 12px;
+}
+.profile{
+	margin-bottom: 30px;
+	display: block;
+	font-weight: 100;
+	letter-spacing: 2px;
+}
+.copy{
+	position:  fixed;
+	bottom: 20px;
+	right: 30px;
+	font-weight: 100;
+}
+.link{
+	color: white;
+	text-decoration: none;
+	position: relative;
+	margin: 15px 0 0 5px;
+	display: inline-block;
+}
+.link::after{
+	position: absolute;
+	display: block;
+	content: '';
+	width: 100%;
+	height: 1px;
+	bottom: 0;
+	left: 0;
+	transition: all ease-in-out  .3s;
+	z-index: -1;
+}
+.link:hover::after{
+	height: 100%;
+}
+.link.email{
+	color: #4888E0;
+}
+.link.email::after{
+	background: #4888E0;
+	opacity: .3;
+}
+.link.dribbble{
+	color: #EA4C89;
+}
+.link.dribbble::after{
+	opacity: .3;	
+	background: #EA4C89;
+}
+
+@media only screen and (min-width: 960px) {
+	.container{
+		padding-left: 130px
+	}
+	.icon{
+		margin-left: -150px
+	}
+
+}
