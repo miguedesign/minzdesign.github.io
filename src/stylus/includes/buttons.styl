@@ -1,0 +1,117 @@
+.btn
+	background white_color
+	border none
+	color grey_color_4
+	font-family tipography
+	font-size .9em
+	font-weight 400
+	letter-spacing 1px
+	line-height 1.5em
+	outline 0
+	overflow hidden !important
+	padding 5px 12px
+	position relative
+	text-decoration none
+	text-transform uppercase
+	transition_all(.3s)
+	border-radius 50px
+	
+	&:hover
+		shadow_custom(0, 15px, 30px, -10px, .4)
+	
+	&-disabled
+		opacity .2
+		cursor default
+		border solid thin grey_color_3
+		&:hover
+			box-shadow none
+			color grey_color_4
+			background transparent !important
+		
+	&-mini
+		padding 2px 6px
+		font-size 10px
+	
+	&-small
+		padding 4px 10px
+		font-size 12px
+		
+	&-medium
+		font-size 14px
+		padding 8px 13px
+	
+	&-big
+		padding 10px 15px
+		line-height 1.7em
+	
+	&-mega
+		padding 15px 25px
+		line-height 1.9em
+	
+	&-danger
+		color white_color
+		background danger_color
+		border solid thin danger_color
+		&:hover
+			color white_color	
+	&-success
+		color white_color
+		background success_color
+		border solid thin success_color
+		&:hover
+			color white_color
+	&-warning
+		color white_color
+		background warning_color
+		border solid thin warning_color
+		&:hover
+			color white_color
+	&-upload
+		display inline-block
+		
+	&-raised
+		shadow()
+		overflow hidden !important
+		background dark_color
+		color white_color
+		border none
+		&:hover
+			shadow_custom(0, 15px, 30px, -10px, .6)
+			color white_color
+			
+		
+	&-flat
+		color dark_color
+		background transparent
+		overflow hidden !important
+		border solid thin transparent
+		&:hover
+			shadow()
+	&-ghost
+		border solid thin grey_color_3
+		color grey_color_3
+		background transparent
+		&:hover
+			background white_color
+			color dark_color
+	
+	&-default
+		color grey_color_3
+		border solid thin grey_color_3
+		&:hover
+			color white_color
+			background grey_color_3
+	&-float
+		position absolute
+		bottom -30px
+		margin-left -10%
+		
+		
+	&-block
+		display block
+		width 100%
+		max-width 250px
+		text-align center
+		margin 5px auto
+
+

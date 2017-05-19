@@ -1,0 +1,153 @@
+// Lists project home
+.Projects
+	width 100%
+	margin 0 auto 90px
+	background rgba(white_color, .5)
+	 
+	&__link
+		text-decoration none
+		color dark_color
+		display inline-block
+		margin 0 auto 10px
+		width 100%
+		padding 20px 10px 20px 0
+		border-bottom solid thin grey_color_2
+		
+		/*
+		* To efect hover
+		*/
+		&-hide-other
+			opacity 0.2
+		&-show
+			opacity 1
+			
+
+	&__title
+		font-weight 700
+		font-size	1.3em
+		width 30%
+		display inline-block
+		span
+			font-size .8em
+	&__caption
+		font-weight 400
+		font-size	1.1em
+		display inline-block
+		color grey_color_3
+		width 68%
+		background-position -1200px
+		background-size 10px
+		background-repeat no-repeat
+		
+
+// Project
+.Project
+	&__header
+		width 100%
+		min-height 120px
+		display inline-block
+		h1
+			font-size 60px
+			font-weight 700
+		h3 
+			font-size 20px
+	&__step
+		position relative
+		&::before
+			background grey_color_3
+			border solid thin grey_color_3
+			content ''
+			display block
+			height 2px
+			left 5px
+			position absolute
+			top 20px
+			width 10px
+			z-index 1
+		&::after
+			content ''
+			position absolute
+			z-index -1
+			width 1px
+			height 130%
+			left 10px
+			top 20px
+			display block
+			background grey_color_3
+		&.step-img
+			&::before
+				display none
+		&.step-dot
+			&::after
+				top -120px
+				height 140px
+				
+	&__title
+		vertical-align top
+		sup
+			position relative
+			font-size .6em
+			margin-right 10px
+			&::after
+				content ''
+				display block 
+				width 50px
+				background grey_color_4
+				height 1px
+				transform rotate(-65deg)
+				position absolute
+				right -10
+				bottom 0
+	&__icon
+		max-width 100px
+		margin 0 auto
+	&__learing
+		font-weight 700
+		font-size 2em
+		color primary_color
+	&__footer
+		background grey_color_3
+		
+
+@media only screen and (min-width : 910px)
+	.Projects
+		&__title
+			font-size	1.7em
+		&__caption
+			font-size	1.5em
+		&__link
+			padding 40px 30px 40px 0
+
+@media only screen and (min-width : 1100px)
+	.Projects
+		&__caption
+			background transparent
+			background-position 1200px center
+			background-repeat no-repeat
+			background-size 100px
+		&__link
+			padding 10px 
+			line-height 100px
+			&>*
+				transition_all(.5s)
+			&:hover
+				&>*
+					color primary_color
+				.Projects
+					&__caption
+						background-position right center
+				
+
+
+	.Project
+		&__header
+			h1
+				font-size 130px
+			h3 
+				font-size 32px
+		
+
+
+
+
+	 

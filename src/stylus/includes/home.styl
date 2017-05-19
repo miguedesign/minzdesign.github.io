@@ -1,0 +1,203 @@
+.dots
+	letter-spacing 3px
+	margin 0
+	&.small
+		font-size 14px
+	&.medium
+		font-size 24px
+	&.big
+		font-size 48px
+		
+.Hero
+	text-align center
+	position relative
+	margin-top 100px
+	margin-bottom 200px
+	&__name
+		width 50%
+		text-align left
+		display block
+		font-size 14px
+		color grey_color_3
+		line-height 35px
+		letter-spacing 2px
+		margin 70px 0 0 10%
+		font-weight 600
+		
+	&__contact
+		display none
+	&__lead
+		font-size 18px
+		left 10px
+		margin 10px auto
+		width 70%
+		max-width 500px
+		position absolute
+		text-align left
+		top 60px
+		p
+			margin 0
+			font-weight 600
+			color primary_color
+	&__image
+		background white_color
+		min-height 200px
+		width 80%
+		margin 0 auto
+		display inline-block
+		shadow_custom(0, 30px, 75px, -10px, .4)
+		
+	&__arrow
+		bottom 40px
+		color grey_color_3
+		font-size 14px
+		font-weight 600
+		left 10%
+		letter-spacing 2px
+		margin 0
+		position absolute 
+		// transform rotate(90deg)
+		transition_all(.2s)
+		&::before
+			background grey_color_3
+			bottom 0
+			content ''
+			display block
+			height 2px
+			left 0
+			transition_all(.2s)
+			position absolute
+			width 100%
+	&__cta
+		background primary_color
+		bottom 10%
+		color white_color
+		display block
+		font-weight 600
+		padding 10px 10px
+		position absolute
+		right 5%
+		text-transform uppercase
+		font-size 14px
+	&__dots
+		position absolute
+		bottom 20px
+		left 50%
+		width 50px
+		color dark_color
+		margin-left -25px
+			
+		
+.title_section
+	color rgba(grey_color_3, .3)
+	font-size 2.5em
+	margin 10px auto 0
+	
+.highlight
+	position relative
+	display inline-block
+	color primary_dark_color
+	&::after
+		background rgba(primary_color, .4)
+		bottom 0
+		content ''
+		display block
+		height 60%
+		left 0
+		position absolute
+		width 100%
+		z-index -1
+		
+
+
+
+// @media only screen and (min-width : 480px)
+	
+@media only screen and (min-width : 610px)
+	.Hero
+		&__name
+			font-size 18px
+		&__contact
+			display inline-block
+			position absolute
+			top 5px
+			right 10%
+			text-align left
+			z-index 10
+		&__lead
+			font-size 22px
+		&__cta
+			bottom 30px
+			padding 20px 30px
+			background rgba(primary_color, .9)
+		&__arrow
+			font-size 16px
+			left 8%
+			
+		
+@media only screen and (min-width : 910px)
+	.Hero
+		&__name
+			margin-left 15%
+		&__contact
+			right 15%
+		&__lead
+			font-size 30px
+			width 80%
+			max-width 550px
+			left 0
+		&__image
+			width 70%
+	
+@media only screen and (min-width : 1100px)
+	.Hero
+		margin-top 140px
+		&__lead
+			max-width 500px
+			width 85%
+			left 0
+			font-size 40px
+		&__arrow
+			left 15%
+			&:hover
+				color primary_color
+				&::before
+					background primary_color
+					width 110%
+		&__cta
+			z-index 20
+			&::after
+				content ''
+				display block
+				width 100%
+				height 0px
+				position absolute
+				bottom 0
+				z-index -1
+				left 0
+				transition_all(.2s)
+				background primary_dark_color
+			&:hover
+				&::after
+					height 100%
+		
+
+@media only screen and (min-width : 1400px)
+	.Hero
+		margin-top 250px
+		margin-bottom 250px
+		&__image
+			width 80%
+			min-height 450px
+		&__name
+			margin-left 10%
+		&__contact
+			right 10%
+
+
+
+
+
+
+
+

@@ -1,0 +1,45 @@
+.Hero__about
+	position relative
+	&__img
+		width 140px
+		overflow hidden
+		height 140px
+		border-radius 50%
+		 
+	&__lead
+		bottom 20%
+		color primary_color
+		font-size 18px
+		max-width 300px
+		position absolute
+		left 100px
+		z-index 10
+		
+		p
+			font-weight 600
+		
+.Skills
+	&__list
+		border-left solid 3px primary_color
+		padding-left 10px
+	&__preview
+		margin-top -30px
+	
+@media only screen and (min-width : 610px)
+	.Hero__about
+		&__lead
+			font-size 26px
+			max-width 350px
+
+@media only screen and (min-width : 910px)
+	.Hero__about
+		&__lead
+			font-size 28px
+			max-width 660px
+			bottom 5%
+			
+
+@media only screen and (min-width : 1100px)
+	.Hero__about
+		&__lead
+			font-size 40px

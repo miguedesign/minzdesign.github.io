@@ -1,0 +1,28 @@
+/* Mixins
+_____________________________________________________ */
+shadow()
+	box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.12), 0px 2px 2px 0px rgba(0,0,0,0.24);
+
+
+shadow_custom(x, y, b, i, o)
+	box-shadow x y b i rgba(black_color, o)
+	
+shadow_2()
+	box-shadow 0px 0px 8px -5px rgba(0,0,0,0.12), 0px 8px 12px -5px rgba(0,0,0,0.24);
+
+shadow_strong()
+	box-shadow 0 12px 15px 0 rgba(0, 0, 0, 0.3)
+	
+border_radius()	
+	border-radius 2px
+
+border_grey()
+	border solid thin grey_color_4
+
+border_bottom()
+	border-bottom solid thin grey_color_4
+	
+
+transition_all(s)
+	transition all s cubic-bezier(0.22, 0.61, 0.36, 1)
+	
