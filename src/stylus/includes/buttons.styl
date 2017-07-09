@@ -3,7 +3,7 @@
 	border none
 	color grey_color_4
 	font-family tipography
-	font-size .9em
+	font-size 14px
 	font-weight 400
 	letter-spacing 1px
 	line-height 1.5em
@@ -14,11 +14,8 @@
 	text-decoration none
 	text-transform uppercase
 	transition_all(.3s)
-	border-radius 50px
-	
-	&:hover
-		shadow_custom(0, 15px, 30px, -10px, .4)
-	
+	&-radius
+		border-radius 50px
 	&-disabled
 		opacity .2
 		cursor default
@@ -43,75 +40,29 @@
 	&-big
 		padding 10px 15px
 		line-height 1.7em
+		font-weight 600
 	
 	&-mega
 		padding 15px 25px
 		line-height 1.9em
-	
-	&-danger
-		color white_color
-		background danger_color
-		border solid thin danger_color
-		&:hover
-			color white_color	
-	&-success
-		color white_color
-		background success_color
-		border solid thin success_color
-		&:hover
-			color white_color
-	&-warning
-		color white_color
-		background warning_color
-		border solid thin warning_color
-		&:hover
-			color white_color
-	&-upload
-		display inline-block
-		
-	&-raised
-		shadow()
+		font-weight 600
+			
+	&-positive
 		overflow hidden !important
-		background dark_color
+		background primary_color
 		color white_color
 		border none
-		&:hover
-			shadow_custom(0, 15px, 30px, -10px, .6)
-			color white_color
-			
+		shadow_custom(0, 5px, 20px, -4px, .2)
 		
-	&-flat
-		color dark_color
-		background transparent
+	&-negative
 		overflow hidden !important
-		border solid thin transparent
-		&:hover
-			shadow()
-	&-ghost
-		border solid thin grey_color_3
-		color grey_color_3
-		background transparent
-		&:hover
-			background white_color
-			color dark_color
-	
-	&-default
-		color grey_color_3
-		border solid thin grey_color_3
-		&:hover
-			color white_color
-			background grey_color_3
-	&-float
-		position absolute
-		bottom -30px
-		margin-left -10%
-		
-		
-	&-block
-		display block
-		width 100%
-		max-width 250px
-		text-align center
-		margin 5px auto
+		background white_color
+		color primary_color
+		border none
+		shadow_custom(0, 5px, 20px, -4px, .2)
 
 
+@media only screen and (min-width : 1100px)
+	.btn
+		&:hover
+			shadow_custom(0, 15px, 90px, -5px, .4)

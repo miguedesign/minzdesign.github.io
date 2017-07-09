@@ -2,17 +2,23 @@
 var projects = function(){
   
 	$('a[rel=simplezoom]').simplezoom();
-	
-	var data = $('[data-bg]');
-		bg = data.attr('data-bg');
 
+	// Cambia el color del caption en los proyectos
+	function bgItemsProjects(){
+		var projec = $('[data-bg]');
+		
+		projec.css('background-color', function(){
+			return $(this).data('bg');
+		});
+		
+	}
+
+	bgItemsProjects();
+
+
+	
 	var data_color = $('[data-color]');
 		color = data_color.attr('data-color');
-
-	$('[data-bg]').css({
-		'background': '#'+bg
-	});
-	
 	$('[data-color]').css({
 		'color': '#'+color
 	});

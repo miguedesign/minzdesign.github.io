@@ -1,5 +1,5 @@
 .topbar
-	background primary_color
+	background dark_color
 	position fixed
 	top 0
 	left 0
@@ -8,7 +8,7 @@
 	z-index 3000
 	&::before
 		content ''
-		background-color dark_color
+		background-color black_color
 		display block
 		height 100%
 		width 1px
@@ -19,7 +19,30 @@
 	&.is-loading
 		&::before
 			animation progress 2s infinite ease-in-out
-	
+
+.Header	
+	transition all .3s linear
+	padding 20px 10px 0
+	&.is-scrolled
+		padding-top 0
+		background rgba(white_color, .95)
+	&-Menu
+		&-Link
+			font-size 14px
+			font-weight 600
+			color dark_color
+			padding 5px 10px
+			letter-spacing 2px
+		&-Logo
+			border solid 12px dark_color
+			border-radius 50%
+			display inline-block
+			height 30px 
+			width 30px 
+			transition_all(.3s)
+			span
+				display none
+
 
 @keyframes progress
 	0%
@@ -38,9 +61,39 @@
 				
 
 
-// @media only screen and (min-width : 1200px)
+@media only screen and (min-width : 1100px)
+	.topbar
+		padding 0
+	.Header	
+		&-Menu
+			&-Link
+				margin 20px 
+				padding 10px
+				position relative
+				&:last-child
+					margin-right 0
+				&::after
+					content ''
+					background primary_color
+					width 0
+					position absolute
+					bottom 0
+					left 50%
+					height 2px
+					display block
+					transition_all(.3s)
+				&:hover
+					color primary_color
+					&::after
+						left 0
+						width 100%
+			&-Logo
+				height 40px 
+				width 40px 
+				&:hover
+					border solid 20px dark_color
+					
 
-			
 
 
 

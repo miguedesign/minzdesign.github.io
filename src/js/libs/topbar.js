@@ -7,20 +7,42 @@ var topbar = function () {
 		menu = $('#menu');
 			
 
-	btn_toggle.on('click', function(e){
-		e.preventDefault();
-		console.log('me clickeaste');
-		$(this).toggleClass('is-clicked');
-		menu.toggleClass('is-open');
-	});
+	// btn_toggle.on('click', function(e){
+	// 	e.preventDefault();
+	// 	console.log('me clickeaste');
+	// 	$(this).toggleClass('is-clicked');
+	// 	menu.toggleClass('is-open');
+	// });
 
 
-	if(window.matchMedia('(min-width:1200px)').matches){
-	  btn_toggle.on('mouseenter', function(){
-			menu.addClass('is-open');
-			$(this).addClass('is-clicked');
+	// if(window.matchMedia('(min-width:1200px)').matches){
+	//   btn_toggle.on('mouseenter', function(){
+	// 		menu.addClass('is-open');
+	// 		$(this).addClass('is-clicked');
+	//   });
+	// }
+
+
+	var header = $('.Header'),
+			previousScroll = 0,
+    	originalTop = header.offset().top;
+
+  $(window).scroll(
+	    function(e){
+	    if ($(this).scrollTop() >= originalTop + 50)
+	    {
+          header.addClass('is-scrolled');
+
+	    }
+	    else
+	    {
+          header.removeClass('is-scrolled');
+        
+	    } 
+
 	  });
-	}
+
+
 
 	/* 
 	* Function to animate leaving a page
