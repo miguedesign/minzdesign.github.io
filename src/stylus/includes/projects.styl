@@ -11,18 +11,18 @@
 		background-size cover
 		display block
 		height 240px
-		margin 0 auto
+		margin 0 auto 50px
 		position relative
 		width 240px
 		&::after
 			content ''
 			display block
 			z-index 1
-			background-color dark_color
+			background-color rgba(dark_color, .5)
 			width 100%
 			height 95%
 			top 0
-			right 0
+			left 0
 			transition_all(.3s)
 		&__letter
 			height 100px
@@ -33,7 +33,14 @@
 			margin-top -50px
 			margin-left -50px
 		&__icon
-			display none
+			display block
+			width 100px
+			display inline-block
+			position absolute
+			bottom -30px
+			right -50px
+			transition_all(.3s)
+			
 		&__caption
 			display block
 			position absolute
@@ -146,10 +153,21 @@
 
 @media only screen and (min-width : 910px)
 	.Projects
-		&__title
-			font-size	1.7em
-		&__caption
-			font-size	1.5em
+		&__link
+			width auto
+			min-height 50vh
+			&__icon
+				display none
+		// &__title
+		// 	font-size	1.7em
+		// &__caption
+		// 	font-size	1.5em
+
+@media only screen and (min-width : 1000px) and (orientation: portrait) and (min-height : 1000px)
+	.Projects
+		background red
+		&__link
+			min-height auto
 
 @media only screen and (min-width : 1100px)
 	.Projects
@@ -163,13 +181,14 @@
 			margin 0
 			width 250px
 			height 250px
+			min-height 250px
 			&::after
-				width 100%
+				width 95%
 				height 100%
 				
 			&__icon
 				display block
-				width 130px
+				width 120px
 				display inline-block
 				position absolute
 				bottom -30px
@@ -186,9 +205,10 @@
 			* To efect hover
 			*/
 			&-hide-other
-				filter: blur(4px)
+				opacity .9
+			// 	filter: blur(4px)
 			&-show
-				shadow_custom(0, 15px, 200px, -5px, .2)
+				shadow_custom(0, 20px, 60px, -5px, .2)
 				filter: blur(0px)
 			// -------
 				

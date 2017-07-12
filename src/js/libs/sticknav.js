@@ -9,7 +9,7 @@ var sticknav = function () {
 	  var cur_pos = $(this).scrollTop();
 	  
 	  sections.each(function() {
-	    var top = $(this).offset().top -400,
+	    var top = $(this).offset().top -150,
 	        bottom = top + $(this).outerHeight();
 	    
 	    if (cur_pos >= top) {
@@ -24,7 +24,7 @@ var sticknav = function () {
 	    , id = $el.attr('href');
 	  
 	  $('html, body').animate({
-	    scrollTop: $(id).offset().top -50
+	    scrollTop: $(id).offset().top -0
 	  }, 500, 'easeInOutCirc');
 	  return false;
 	});

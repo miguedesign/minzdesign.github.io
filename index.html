@@ -34,7 +34,7 @@
  -->
 
 </head>
-<body id="top">
+<body>
 	<div class="topbar">
 		<header class="Header">
 			<div class="row container items-around">
@@ -42,17 +42,30 @@
 					<a href="/" class="leave Header-Menu-Logo"><span>Migue</span></a>
 				</div>
 				<div class="col-xs8 m_top_20 text-right">
-					<a href="/#top" class="scroll Header-Menu-Link">Hello</a>
-					<a href="/#book" class="scroll Header-Menu-Link">Book</a>
-					<a href="/#me" class="scroll Header-Menu-Link">Me</a>
+					<nav class="StickNav">
+						<a href="#top" class="scroll Header-Menu-Link is-current">Hello</a>
+						<a href="#book" class="scroll Header-Menu-Link">Book</a>
+						<a href="#me" class="scroll Header-Menu-Link">Me</a>
+					</nav>
 				</div>
 			</div>
 		</header>
 	</div>
 	
-	<section class="Hero t-left">
+	<section class="Hero t-left section_nav" id="top">
 		<div class="container p_right_10 p_left_10">
-			<h1 class="Hero-lead">Adjusting Pixels on Design Products</h1>
+			<!-- <h1 class="Hero-lead">Adjusting Pixels on Design Products</h1> -->
+			<h1 class="Hero-lead">
+			  Adjusting Pixels on 
+			   <div id="typed-strings">
+			       <p>Design Products</p>
+			       <p>Motion Design</p>
+			       <p>Pixel Art</p>
+			       <p>Mobile & Desktop</p>
+			       <p>Code</p>
+			   </div>
+			   <span id="typed" style="white-space:pre;"></span>
+			</h1>
 			<h2 class="Hero-copy">Hello! my name is <a href="#me" class="t-link t-link-dark scroll">Migue</a> a multi-disciplinary designer from Puebla, Mx.</h2>
 			<div class="m_top_40 Hero-cta">
 				<a href="#book" class="btn btn-mega btn-negative scroll">My book</a>
@@ -61,7 +74,7 @@
 		</div>
 	</section>
 
-	<section id="book">
+	<section id="book" class="section_nav">
 		<section class="Projects">
 			<div class="row container items-around items-top p_top_40 p_right_10 p_left_10 m_bottom_40">
 				<div class="col-xs12">
@@ -168,20 +181,44 @@
 		</section>
 	</section>
 
-	<section id="me" class="p_top_40 m_top_40">
-		<div class="row container items-around items-top p_top_40 p_right_10 p_left_10 m_bottom_40">
-			<div class="col-xs12">
-				<h2 class="TitleSection TitleSection-up">Me</h2>
-				<h3 class="TitleSection">Adjusting Pixels on Design Products</h3>
+	<section id="me" class="section_nav p_top_40">
+		<div class="Profile p_left_10 p_right_10">
+				<div class="Profile-Description">
+					<h2 class="TitleSection TitleSection-up">Me</h2>
+					<h3 class="TitleSection">UI & Motion Designer</h3>
+					
+					<div class="d_in-block text-justify f-normal 
+					Profile-Description-Content">
+						<div class="m_top_40 m_bottom_40">
+							<p class="m_top_5 m_bottom_5"><strong><a href="mailto:mishortcut@gmail.com" target="_blank" class="c-dark">mishortcut@gmail.com</a></strong></p>
+							<p class="m_top_5 m_bottom_5"><strong><a href="https://twitter.com/mishortcut" target="_blank" class="c-dark">@mishortcut</a></strong></p>
+						</div>
+
+						<p>Hello, my name is Migue and I am a multi-disciplinary designer based on Puebla, México. I passionate my work, as designer I consider me an agent of change, after the university i'm learning constantly self taught about my profession development and colaborate in several proyects and when I'm not designing something cool or writing code cute, i ride a bike.</p>
+						
+						<div class="Profile-Description-Resume">
+							<p><strong><a href="./public/docs/cv-miguel-martinez-ui-designer.pdf" download target="_blank" class="t-link">Download my resume</a></strong></p>
+						</div>
+					</div>
+				</div>
+				<div class="Profile-Picture"></div>
 			</div>
-			<br> <br> <br> <br> <br> <br> <br> <br> <br> <br>
-			<br> <br> <br> <br> <br> <br> <br> <br> <br> <br>
-			<br> <br> <br> <br> <br> <br> <br> <br> <br> <br>
-			<br> <br> <br> 
-		</div>
 	</section>
 
-	
+	<footer class="Footer">
+		<div class="row items-around container">
+			<div class="col-xs12 col-sm10">
+				<a href="https://dribbble.com/mishortcut" target="_blank" class="t-link t-link-mini">dribbble</a>
+				<a href="https://www.behance.net/mishortcut" target="_blank" class="t-link t-link-mini">behance</a>
+				<a href="https://instagram.com/mishortcut" target="_blank" class="t-link t-link-mini">instagram</a>
+				<a href="https://www.linkedin.com/in/mishortcut" target="_blank" class="t-link t-link-mini">linkedin</a>
+				<a href="https://twitter.com/mishortcut" target="_blank" class="t-link t-link-mini">twitter</a>
+			</div>
+			<div class="col-xs12 col-sm2 text-right">
+				<p class="caption">© 2017  M I G U E</p>
+			</div>
+		</div>
+	</footer>
 
 
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>

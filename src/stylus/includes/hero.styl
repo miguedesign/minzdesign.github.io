@@ -4,8 +4,11 @@
 	display inline-block
 	width 100%
 	overflow hidden
+	transition_all(.5s)
+		
+		
 	&-lead
-		font-size 40px
+		font-size 36px
 		font-weight 100
 		margin 0
 		margin-top 140px
@@ -19,11 +22,14 @@
 	&-cta 
 		text-align center
 	
+		
 @media only screen and (min-width : 610px) and (orientation: landscape) and (max-width : 910px)
 	.Hero
 		height auto
+		min-height 450px
 		padding-bottom 30px
 		&-lead
+			margin-top 100px
 			font-size 38px
 		&-copy
 			font-size 30px

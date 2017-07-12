@@ -1,3 +1,35 @@
+.Profile
+	width 100%
+	position relative
+	overflow hidden
+	padding 40px 0 0
+	&-Description
+		background rgba(white, 0)
+		margin-top 400px
+		background white_color
+		padding 30px 10px 40px
+		// &-Content
+		&-Resume
+			margin 0
+			display inline-block
+			
+	
+	&-Picture
+		top 0
+		position absolute
+		right 0
+		z-index -1
+		display inline-block
+		width 100%
+		background-color #fafafa
+		background-image url('../img/static/mishortcut.jpg')
+		background-size 100%
+		background-position top center
+		background-repeat no-repeat
+		height 100%
+		
+
+
 .Hero__about
 	position relative
 	&__img
@@ -26,15 +58,91 @@
 		margin-top -30px
 	
 @media only screen and (min-width : 610px)
-	.Hero__about
-		&__lead
-			font-size 22px
-			max-width 350px
-
-@media only screen and (min-width : 910px)
-	.Hero__about
-		&__lead
-			font-size 24px
-			max-width 660px
-			bottom 15%
+	.Profile
+		&-Description
+			padding 20px 20px 40px 0
+			background white_color
+			max-width 75%
+			margin-top 100px
+			max-width 450px
+			&-Content
+				padding-right 20px
+				background white_color
+			&-Resume
+				background white_color
+				width 100%
+				
+		&-Picture
+			bottom 0
+			top initial
+			right -250px
+	
+		
 			
+@media only screen and (min-width : 910px)
+	.Profile
+		max-width 1720px
+		margin 0 auto
+		&-Description
+			margin-top 0
+			max-width 600px
+			
+		&-Picture
+			width 50%
+			padding 20px
+			right 0
+@media only screen and (min-width : 710px)
+	.Profile
+		&-Description
+			margin-top 0
+		&-Picture
+			max-width 450px
+			right -50px
+
+
+@media only screen and (min-width : 1100px)
+	.Profile
+		padding 0
+		&-Description
+			background transparent
+			max-width 620px
+			margin-top 0
+		&-Picture
+			width 450px
+			background-position bottom center
+
+@media only screen and (min-width : 1200px)
+	.Profile
+		padding 50px 0 100px
+		&-Picture
+			right 0
+			width 50%
+			max-width 500px
+			background-position top center
+		
+		&-Description
+			max-width 800px
+			&-Content
+				max-width 630px
+			&-Resume
+				margin-top 50px
+
+@media only screen and (min-width : 1400px)
+	.Profile
+		padding 100px 0 250px
+		&-Picture
+			max-width 600px
+
+
+
+
+
+
+
+
+
+
+
+
+
+

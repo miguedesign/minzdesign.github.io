@@ -1,19 +1,20 @@
 /*!
-	Theme Name: MINZ | Miguel Martínez: Product interface designer
+	Theme Name: Migue | @mishortcut: Product interface designer
 	Theme URI: http://minz.design
-	Author: MINZ
+	Author: Mishortcut
 	Author URI: http://minz.design
-	Author Contact: minzdesigner@gmail.com
-	Description: Profile of Miguel aka MINZ
-	Version: 1.0
-
+	Author Contact: mishortcut@gmail.com
+	Description: Profile of Migue | @mishortcut
+	Version: 2.0
 	Licensed under the MIT license.
-	Copyright 2016 Miguel Martínez
+	Copyright 2017 Migue
 */
 
 var easing = require('./vendor/easing');
 
 var simplezoom = require('./vendor/simplezoom');
+
+var typed = require('./vendor/typed');
 
 var scrollreveal = require('./libs/scrollreveal');
 
@@ -24,6 +25,9 @@ var topbar = require('./libs/topbar');
 var projects = require('./libs/projects');
 
 var sticknav = require('./libs/sticknav');
+
+var tipedJS = require('./libs/tipedJS');
+
 
 
 jQuery(document).ready(function($) {
@@ -37,6 +41,8 @@ jQuery(document).ready(function($) {
 	sticknav();
 
 	scrollreveal();
+
+	tipedJS();
 
 });
 

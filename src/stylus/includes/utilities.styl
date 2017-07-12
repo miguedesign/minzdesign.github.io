@@ -21,11 +21,9 @@
 
 
 .caption
-	color secundary_text_color
-	line-height 1.5em
-	font-size 14px
-	&::before
-		font-size 14px
+	color grey_color_4
+	line-height 1.2em
+	font-size 12px
 
 
 
@@ -126,15 +124,16 @@ hr,
 			height 100%
 	&-white
 		color white_color
-	&-grey
-		color grey_color_3
+	&-mini
+		color dark_color
 		font-weight 400
+		font-size 12px
 		&::after
-			background rgba(grey_color_3, .5)	
-			height 2px
+			content none
 		&:hover
-			color dark_color
-
+			color primary_color
+			
+				
 /* Margins */
 .m_0 
 	margin 0 !important

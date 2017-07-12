@@ -33,13 +33,28 @@
 			color dark_color
 			padding 5px 10px
 			letter-spacing 2px
+			&.is-current
+				color primary_color
 		&-Logo
-			border solid 12px dark_color
+			background dark_color
 			border-radius 50%
 			display inline-block
-			height 30px 
-			width 30px 
+			height 32px 
+			width 32px 
 			transition_all(.3s)
+			position relative
+			overflow hidden
+			&::before
+				background white_color
+				border-radius 50%
+				content ''
+				display block
+				height 50%
+				left 8px
+				position absolute
+				top 8px
+				transition_all(.3s)
+				width 50%
 			span
 				display none
 
@@ -90,9 +105,45 @@
 			&-Logo
 				height 40px 
 				width 40px 
+				position relative
+				&::before
+					left 10px
+					top 10px
+				&::after
+					background-image url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAAEsCAYAAAB5fY51AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAABr1JREFUeNrs3YFx00gUBmCJBs4doKsgoYK4A3wVnDvAHZypIFBBSAXJVWBfBTYVxFRgqEAnzawmIhiCEynWrr5vRhPCDBmy+/zrPduSswwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBH52H7hsiyn1Zf6OKuOSfjrbXV8ro51nuc7ZcHAava8VbNF+Otdq2a3Vim9TV9Wx7583E0oEDh1zc6qY/MbNXtXHXMrlsjZKWzosS6tHieq2Uk4cR5rVf9bKxh3WO3Lp7uyipwgrDbPqNk7E8I4w0poEVtYNTY6rfg2v4uNb8ysKC9Qs5cd1uyNFY1n4+dlt/bOWPRcs0XZvamVjWPz73rY/LmVJZLuKtkuK09w4+snHDc9/OjbPM//8tCir5Nsdv8eq+4e4BWrO+yNX5Q9sbpENA4mORa+SnD/PddEbIoef3ZSb3F4pVaOOhNOrQJO4AIrFjtLAAIrCi6Mpidfe/zZ66Qeg4mObasefvS2Cqw3Hlv0VLd9vajzpxPt8Dd/38OrLUsrS481e9NDzW6sbBybf9XD5hdWlj4nA292Hu/mTzrustxqhpeo21WHNXtnRePa/K6uJ3TlOy9Vs0WHJ1q3mBnhaLi38bxwzc6MguMugMUzOithxSlqdvrETmvvVkjpFMDqiE1fGgM5cc1OjpwQrrwwlGZwXR64ud8+vKy8EFQMrGaLcAJd/eQe7ktBBQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADAA9YenWgVGUuv1p0WfW4l4N7AIn5B7Vx1zK0LCtb4In2C+9+nl8W7i6sBHe+u4SKnGZ+GE3HZpZeLbyHn5c4KL2Ot7euCE3Ka+I5vl9+XjBBepBVVjY7Xi2dSb8jiCixgmhs2Rdb20cnGcgZ7Kk/MMbVKYH3iO6hiFlRz2Bj9ncxv1OLn0agsnquMi1N++g1peWdHhbvSy7N6VcZEXnA6ueqjhhdUd3mafl/26C+910XXR9VSw6Ggy+NXEoG4HtvGb8uXUZ8GZVecZ9TrrqZv6mRurPpzNX5SnUZ8VL10OwRFTwGXP3dSvRH+SzRMogqL6Ur/n5NQt77Y6rqvjNs/znYcnrfqsg+JddRQn/u/Udfmmqs+vduZ0BXFZDs8mdH2FHRpnSIX93wywNud26PQFMu/oJWBjI7GOe79Th1Mj4XAKph4JF6H1HuorInUrflsd/4XRUWsed73Vo95F+Drkmntf1dqHFNY9T7CQ6jHsn+qIofWtn/f6tzrWVUGtxcDga6vuUOrjbXUMvWOug+pjdXxI6cSYJ1xcMQVXYx26LwE2rIC6CF9j8SF0Vcl18PkIii7G4HoYYNsQYkbIfuvkPByxBVT76Yb3Kb9KnY+sIGMNrsYuhNfnEGZbIfakWpiEYKpD6Sz8uYj010ly9Bt9YD0o1qE/OX9swW5DJ1YH2s44+cNYV4TjIoRTCvte7/X1WIJqtIH1ILhmoesqEvwVd62O7FvoyLIUw6z1cn399Y9Wx5Tivtb7+bHax09jfNyONrAOFPy7EGBjsW49AL61OrUsdGm7gYzxTeg0nVETSE1AjUUdUNdj754F1o8PkHlC42LX4dbu3r508HPPDqzz1HJ/t87181OfPFcpsB4Lr7rb+ntkXRe6KYGVQNc1lItXSdc2dFOugBBYnYXXeavrEl50MfJdh5FvZzkEVt8j49ts2NeRMcyQug0j39ZyCKxThdeFzgshJbBiHRun2fAvkKU/zQ0d10JKYMUSXkV2f3X/1OiYNLcOEljJBdg0i/Pqfw5bZ/e3B9JFCazkA2yWxXt3gLEGlNv/CCwedGBnRsiT22X3F5VvBZTA4vEAK7Lv79GUyp0GhqZ9x4ttCKidZRFYdBtidSfWfM/v2YbjS+aeYgKLkwXZeSu8Xrf+PMaObJf9eGudna5JYBFPmE1aAdYE2iTS7mzdCqYvrZHuq1frBBbjGTWL8O3DIHudHX4Hf5E97Z39TQd0aFz79uD7ZlwzugEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAC8lP8FGABOXp+3PXrZgwAAAABJRU5ErkJggg==')
+					background-position center
+					background-size 100%
+					background-repeat no-repeat
+					display block
+					width 36px
+					height 36px
+					content ''
+					position absolute
+					top 4px
+					left 2px
+					z-index 1
+					opacity 0
+					transition_all(.3s)
+					transform scale(0)
+					 
 				&:hover
-					border solid 20px dark_color
-					
+					&::before
+						width 0
+						height 0
+						left 50%
+						top 50%
+					&::after
+						opacity 1
+						transform scale(1)
+						
+
+
+
+
+
+
+
+
 
 
 
