@@ -61,69 +61,77 @@
 		&-show
 			opacity 1
 			
-	
-			
 
-// 	&__title
-// 		font-weight 700
-// 		font-size	1.3em
-// 		width 30%
-// 		display inline-block
-// 		span
-// 			font-size .8em
-// 	&__caption
-// 		font-weight 400
-// 		font-size	1.1em
-// 		display inline-block
-// 		color grey_color_3
-// 		width 68%
-// 		background-position -1200px
-// 		background-size 10px
-// 		background-repeat no-repeat
+
+// Project
+.Project
+	padding 0 0 100px
+	&-Header
+		width 100%
+		padding 120px 0 50px
+		display inline-block
+	&-Overlay
+		display inline-block
+		padding 0 10px
+		position relative
+		top -40px
+		width 100%
+		
+			
+	&-Step
+		position relative
+		padding-top 100px
+		padding-bottom 50px
+		&::before
+			background grey_color_4
+			content ''
+			display block
+			height 100px
+			left 50%
+			position absolute
+			top -50px
+			width 1px
+			z-index 10
+		&-Number
+			font-size 4em
+			font-weight 100
+			line-height 1
+			margin -10px 0 0
+			text-align center
+			color grey_color_4
+		&-Name
+			text-transform uppercase
+			font-weight 800
+			text-align center
+			margin -30px 0 0 
+			
+	&-Yustapos		
+		position relative
+		overflow hidden
+		margin-top 50px
+		&-col
+			position absolute
+			width 500px
+			&.col-1
+				top 0
+				left -20%
+			&.col-2
+				top 100px
+				left 10%
+			&.col-3
+				top 200px
+				left 40%
+	&-Icon
+		max-width 100px
+		margin 30px 0 0
+		&--footer
+			margin 100px auto
+	&-Footer
+		padding 80px 0
+		margin 50px auto
+	
 		
 
-// // Project
-// .Project
-// 	&__header
-// 		width 100%
-// 		min-height 120px
-// 		display inline-block
-// 		h1
-// 			font-size 60px
-// 			font-weight 700
-// 		h3 
-// 			font-size 20px
-// 	&__step
-// 		position relative
-// 		&::before
-// 			background grey_color_3
-// 			border solid thin grey_color_3
-// 			content ''
-// 			display block
-// 			height 2px
-// 			left 5px
-// 			position absolute
-// 			top 20px
-// 			width 10px
-// 			z-index 1
-// 		&::after
-// 			content ''
-// 			position absolute
-// 			z-index -1
-// 			width 1px
-// 			height 130%
-// 			left 10px
-// 			top 20px
-// 			display block
-// 			background grey_color_3
-// 		&.step-img
-// 			&::before
-// 				display none
-// 		&.step-dot
-// 			&::after
-// 				top -120px
-// 				height 140px
-				
 // 	&__title
 // 		vertical-align top
 // 		sup
@@ -149,7 +157,19 @@
 // 		color primary_color
 // 	&__footer
 // 		background grey_color_3
-		
+@media only screen and (min-width : 610px)
+	.Project
+		&-Step
+			&-Number
+				font-size 6em
+		&-Yustapos		
+			&-col
+				&.col-1
+					left -5%
+				&.col-2
+					left 15%
+				&.col-3
+					left 45%
 
 @media only screen and (min-width : 910px)
 	.Projects
@@ -158,14 +178,23 @@
 			min-height 50vh
 			&__icon
 				display none
-		// &__title
-		// 	font-size	1.7em
-		// &__caption
-		// 	font-size	1.5em
+	.Project
+		&-Yustapos		
+			&-col
+				width 500px
+				&.col-1
+					top 0
+					left 0
+				&.col-2
+					top 50px
+					left 25%
+				&.col-3
+					top 100px
+					left 55%
+				
 
 @media only screen and (min-width : 1000px) and (orientation: portrait) and (min-height : 1000px)
 	.Projects
-		background red
 		&__link
 			min-height auto
 
@@ -240,11 +269,22 @@
 
 
 	.Project
-		&__header
-			h1
-				font-size 130px
-			h3 
-				font-size 32px
+		&-Header
+			padding 140px 0 80px
+		&-Yustapos		
+			text-align center
+			&-col
+				position relative
+				width 32%
+				display inline-block
+				vertical-align top
+				margin 0 auto
+				&.col-1
+				&.col-2
+				&.col-3
+					left initial
+			
+
 		
 @media only screen and (min-width : 1400px)
 	.Projects

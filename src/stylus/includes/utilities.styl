@@ -18,7 +18,15 @@
 .bg-grey-light
 	background grey_color_1
 	
-
+.bg-image
+	background-size cover
+	background-repeat no-repeat
+	background-position center
+	&--repeat
+		background-repeat repeat
+		background-size 150px
+		padding-bottom 100px
+		
 
 .caption
 	color grey_color_4
@@ -63,13 +71,44 @@
 	color warning
 	
 
-
 .d_block
 	display block !important
 .d_in-block
 	display inline-block !important
 .d_none
 	display none !important
+
+
+.d_mobile
+	display inline-block
+
+.d_desktop
+	display none
+	
+.d_tablet
+	display none
+	
+@media screen and (min-width: 910px)
+	.d_mobile
+		display none
+	
+	.d_tablet
+		display inline-block
+
+	.d_desktop
+		display none
+	
+@media screen and (min-width: 1025px)
+	.d_mobile
+		display none
+		
+	.d_tablet
+		display inline-block
+
+	.d_desktop
+		display inline-block
+
+
 
 
 .f-right
@@ -106,6 +145,7 @@ hr,
 	transition ease-out .3s
 	word-wrap break-word
 	font-weight 700
+	z-index 2
 	position relative
 	&::after
 		content ''
@@ -132,7 +172,54 @@ hr,
 			content none
 		&:hover
 			color primary_color
+	&-url
+		position relative
+		font-weight 400
+		&::after
+			display none
+		&::before
+			content '→'
+			display block
+			color primary_color
+			z-index 10
+			top 0
+			right -20px
+			position absolute
+			transition_all(.3s)
 			
+		&:hover
+			color primary_color
+			&::before
+				right -30px
+
+.u-unlist,
+.u-listCheck,
+.u-list
+	padding 0 0 0 20px
+	margin 10px 0 10px 0
+	li
+		margin 0 auto 10px
+		font-weight 400
+		&::before
+			content ''
+			margin-right .5em
+			font-weight 600
+			width 10px
+			height 1px
+			background dark_color
+			display inline-block
+			margin-top -10px
+		
+.u-unlist
+	padding 0
+	list-style none
+
+
+
+
+
+
+
 				
 /* Margins */
 .m_0 
@@ -344,10 +431,10 @@ video
 	width 100%
 
 .embed-responsive
-	position relative
-	padding-top 60px
 	overflow hidden
-	padding-bottom 50.25%
+	padding-bottom 56.25%
+	padding-top 25px
+	position relative
 	iframe
 		position absolute
 		top 0
@@ -396,5 +483,3 @@ video
 		width 1px
 		right 0
 		
-
-		 

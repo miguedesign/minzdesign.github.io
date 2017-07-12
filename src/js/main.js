@@ -28,6 +28,7 @@ var sticknav = require('./libs/sticknav');
 
 var tipedJS = require('./libs/tipedJS');
 
+var parallax = require('./libs/parallax');
 
 
 jQuery(document).ready(function($) {
@@ -43,6 +44,8 @@ jQuery(document).ready(function($) {
 	scrollreveal();
 
 	tipedJS();
+	
+	parallax();
 
 });
 

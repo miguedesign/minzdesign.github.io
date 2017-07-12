@@ -13,7 +13,7 @@ var parallax = function () {
           });
 
           $('.slow-parallax').css({
-              'margin-bottom': .5*(scrollPos/6)+"px"
+              'margin-bottom': .5*(scrollPos/10)+"px"
           });
           $('.slow2-parallax').css({
               'margin-bottom': 2*(scrollPos/6)+"px"
